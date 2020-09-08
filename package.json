@@ -1,8 +1,9 @@
 {
   "name": "fello-server",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Server for Fello, the open-source shared kanban board",
+  "author": "Frederick \"ScraperDev\" Johnson",
+  "repository": "https://github.com/ScraperDev/fello-server",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
