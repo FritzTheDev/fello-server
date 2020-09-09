@@ -1,8 +1,8 @@
 import { Entity, Column, PrimaryGeneratedColumn, Index } from 'typeorm';
 import { IsEmail, Length, IsEmpty } from 'class-validator';
 
-@Entity()
-export class User {
+@Entity({ name: "app_user" })
+export class AppUser {
   @PrimaryGeneratedColumn('uuid')
   id: number;
 
