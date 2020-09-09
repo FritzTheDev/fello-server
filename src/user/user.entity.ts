@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Index } from 'typeorm';
 import { IsEmail, Length, IsEmpty } from 'class-validator';
 
 @Entity()
@@ -7,11 +7,12 @@ export class User {
   id: number;
 
   @IsEmail()
-  @Column()
+  @Index()
+  @Column({ unique: true })
   email: string;
 
   @Length(3)
-  @Column()
+  @Column({ unique: true })
   username: string;
 
   // hashed password
