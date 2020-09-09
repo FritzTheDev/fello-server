@@ -5,8 +5,8 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  // TODO: fix this when you know what dmoain the client will be on.
+  // TODO: fix the origins allowed when you know what dmoain the client will be on.
   app.enableCors();
-  await app.listen(3000);
+  await app.listen(process.env.PORT);
 }
 bootstrap();
