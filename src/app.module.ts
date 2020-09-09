@@ -6,13 +6,13 @@ import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
-      type: "postgres",
+      type: 'postgres',
       url: process.env.DATABASE_URL,
       synchronize: true,
       autoLoadEntities: true,
     }),
-    ConfigModule.forRoot({ isGlobal: true }),
     AuthModule,
     UserModule,
   ],
